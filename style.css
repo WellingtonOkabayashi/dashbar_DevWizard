@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg: #422357;
+  --white: #fff;
+}
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: poppins;
+}
+
+.container.active section {
+  position: absolute;
+  left: 300px;
+  transition: all 0.6s ease;
+}
+section {
+  position: absolute;
+  left: 80px;
+  margin-left: 20px;
+  transition: all 0.4s ease;
+}
+section p {
+  color: black;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.navigation {
+  position: fixed;
+  width: 80px;
+  height: 100%;
+  background: var(--bg);
+  border-left: 10px solid var(--bg);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navigation ul li a .icon .apple {
+  display: none;
+  transition: ease;
+}
+.navigation ul li .linear {
+  font-size: 1.5rem;
+  background: linear-gradient(60deg, white, #cd4d89);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.navigation ul .menu {
+  cursor: pointer;
+  position: absolute;
+  color: var(--white);
+  top: 52px;
+  left: 14px;
+  font-size: 2rem;
+  transition: 0.5s ease;
+}
+.navigation.active ul .menu {
+  position: absolute;
+  top: 52px;
+  left: 250px;
+}
+
+.navigation.active {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: var(--bg);
+  border-left: 10px solid var(--bg);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navigation.active ul li a .icon .apple {
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: 18px;
+}
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.navigation ul li:hover {
+  background: var(--white);
+}
+.navigation ul li:nth-child(1) {
+  margin: 40px 0;
+  pointer-events: none;
+}
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--white);
+}
+.navigation ul li:hover a {
+  color: var(--bg);
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+  font-size: 1.75em;
+}
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+  transition: 0.5s;
+}
+
+/*Curvas da parte de fora*/
+.navigation ul li:hover a::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+.navigation ul li:hover a::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 60px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+}
+
+h1 {
+  font-size: 3rem;
+  background: linear-gradient(60deg, #cd4d89, #422357);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+/*
+h2 {
+  font-size: 5rem;
+  background-image: linear-gradient(60deg, #8aedf6, #0a5bbf);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+h3 {
+  font-size: 5rem;
+  background-image: linear-gradient(60deg, #68b2a0, #2c6975);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+*/
