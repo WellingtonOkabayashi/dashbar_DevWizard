@@ -116,8 +116,9 @@ section p {
   position: relative;
   display: block;
   min-width: 60px;
+  top:8px;
   height: 60px;
-  line-height: 70px;
+  line-height: 60px;
   text-align: center;
 }
 .navigation ul li a .icon ion-icon {
