@@ -78,7 +78,7 @@ section p {
 .navigation.active ul li a .icon .apple {
   display: block;
   position: absolute;
-  top: 14px;
+  top: 6px;
   left: 18px;
 }
 .navigation ul {
@@ -166,17 +166,4 @@ h1 {
   -webkit-background-clip: text;
   color: transparent;
 }
-/*
-h2 {
-  font-size: 5rem;
-  background-image: linear-gradient(60deg, #8aedf6, #0a5bbf);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-h3 {
-  font-size: 5rem;
-  background-image: linear-gradient(60deg, #68b2a0, #2c6975);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-*/
+
