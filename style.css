@@ -7,6 +7,9 @@
   --bg: #422357;
   --white: #fff;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   min-height: 100vh;
   overflow-x: hidden;
@@ -23,6 +26,8 @@ section {
   left: 80px;
   margin-left: 20px;
   transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
 }
 section p {
   color: black;
@@ -88,6 +93,7 @@ section p {
   width: 100%;
 }
 .navigation ul li {
+  margin-top: 35px;
   position: relative;
   width: 100%;
   list-style: none;
@@ -109,14 +115,24 @@ section p {
   text-decoration: none;
   color: var(--white);
 }
-.navigation ul li:hover a {
+.navigation ul li a {
+  color: white;
+}
+.navigation ul li a:hover {
+  color: #422357;
+}
+ul li.ativo a {
   color: var(--bg);
+  background: #fff;
+
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
 }
 .navigation ul li a .icon {
   position: relative;
   display: block;
   min-width: 60px;
-  top:8px;
+  top: 8px;
   height: 60px;
   line-height: 60px;
   text-align: center;
@@ -159,7 +175,29 @@ section p {
   border-radius: 50%;
   box-shadow: 35px -35px 0 10px var(--white);
 }
-
+.navigation ul li.ativo a::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+.navigation ul li.ativo a::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 60px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+}
 h1 {
   font-size: 3rem;
   background: linear-gradient(60deg, #cd4d89, #422357);
@@ -167,3 +205,56 @@ h1 {
   color: transparent;
 }
 
+section .divider {
+  width: 95%;
+  position: absolute;
+  top: 640px;
+  background: #422357;
+  height: 2px;
+}
+
+#user {
+  position: flex;
+  top: 650px;
+}
+#chat {
+  position: flex;
+  top: 1300px;
+}
+#help {
+  position: flex;
+  top: 1950px;
+}
+#settings {
+  position: flex;
+  top: 2600px;
+}
+#signout {
+  position: flex;
+  top: 3250px;
+}
+
+#bottom {
+  width: 95%;
+  content: '';
+  position: flex;
+  top: 3950px;
+  height: 20px;
+  padding-bottom: 100px;
+
+  margin: 0 auto;
+}
+.social {
+  width: 95%;
+
+  text-align: center;
+}
+.social a {
+  font-size: 30px;
+
+  padding-inline: 20px;
+}
+.social a:hover {
+  color: #cd4d89;
+  transition: 0.5s ease;
+}
